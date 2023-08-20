@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+/* General */
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,.nav-title{
+    font-family: 'Montserrat', sans-serif;
+}
+section{
+    padding-block:100px ;
+}
+p{
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+    color: #748182;
+}
+
+.gray{
+    background-color: #F7F7F7;
+}
+
+.title h3{position: relative;
+z-index: 1;
+display: inline-block;}
+.title h3::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background: url(../images/dots.png)  repeat;
+
+left: 0;
+bottom: 0px;
+z-index: -1;
+
+
+}
+/* Home */
+
+#home{
+    background: url(../images/bg.jpg) center fixed no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+}
+
+#home ul>li{
+    background-color:rgba(0, 0, 0, 0.1);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.home-content h1::after{
+content: '';
+position: relative;
+animation: text 8s alternate infinite;
+}
+
+@keyframes text {
+    0%{content: "I'm |";}
+    5%{content: "I'm Larry|";}
+    10%{content: "I'm Larry Daniels|";}
+    20%{content: "I'm Larry |";}
+    30%{content: "I'm |";}
+    40%{content: "I'm Deve|";}
+    50%{content: "I'm Developer|";}
+    60%{content: "I'm Deve|";}
+    70%{content: "I'm |";}
+    80%{content: "I'm Des|";}
+    90%{content: "I'm Designer|";}
+    100%{content: "I'm Des|";}
+
+    
+}
+
+
+/* About */
+
+
+
+.dots::after{
+    content: '';
+    background: url(../images/dots.png) center repeat;
+width: 80%;
+height: 80%;
+    position: absolute;
+    bottom: -30px;
+    left: 0px;
+    z-index: -1;
+}
+
+.about-content span{
+    color: #999;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.skill{
+    -webkit-box-shadow: inset 0px 0px 13px 10px rgb(230 230 230);
+-moz-box-shadow: inset 0px 0px 13px 10px rgb(230 230 230);
+box-shadow: inset 0px 0px 13px 10px rgb(230 230 230);
+border-radius:5px;
+margin-top: 3%;
+
+}
+
+.skill-text{
+    background-color: #1c1c1c;
+    color:#fff;
+    padding: 3px 10px;
+    border-radius:5px;
+}
+.download-btn,
+.contact-btn{
+    transition: all 0.5sec;
+}
+.download-btn:hover{
+    background-color: #fff;
+    color: #1c1c1c;
+    border: 1px solid #1c1c1c;
+}
+.contact-btn:hover{
+    background-color: #1c1c1c;
+    color:#fff ;
+    border: 1px solid #1c1c1c;
+}
+
+
+/* Services */
+.service-card{
+    background-color: #fff;
+    padding: 50px 20px;
+}
+.icon-holder{
+    font-size: 30px;
+    margin-bottom: 20px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    transition: all 1s;
+}
+.icon-holder:hover{
+background-color: #1c1c1c;
+color: #fff;
+}
+
+.card-body p{
+    font-size: 1rem;
+}
+
+
+/* Work */
+.img-overlay{
+    background-color: rgb(255, 255,255);
+    opacity: 0;
+    top:0%;
+    left: 0;
+    color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 5px;
+    width: 97% !important;
+    height: 97% !important;
+transition: opacity 1s ;
+}
+.img-overlay h6{
+    transform: translateY(-30px);
+    transition: all 0.5s ;
+}
+.img-overlay .row-icon{
+    transform: translateY(30px);
+    transition: all 0.5s;
+
+}
+.portfolio-card{
+overflow: hidden;
+}
+.portfolio-card:hover .img-overlay{
+    opacity:1;
+}
+.portfolio-card:hover .img-overlay h6{
+    transform: translateY(0px);
+    
+}
+.portfolio-card:hover .img-overlay .row-icon{
+    transform: translateY(0px);
+
+}
+
+.row-icon span{
+    width: 35px;
+    height: 35px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#work .nav-pills .nav-link{
+    color: #1c1c1c !important;
+    background-color: #fff !important;
+
+   
+}
+#work .nav-pills .nav-link.active{
+ 
+    border-bottom: 3px solid #1c1c1c;
+    border-radius: 0px !important;
+}
+
+
+
+/* Clients */
+
+#clients .carousel-indicators,#blog .carousel-indicators{
+    position: absolute;
+    right: 0;
+    bottom: -60px !important;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 15%;
+    list-style: none;
+}
+
+.clients .carousel-indicators [data-bs-target],
+#blog .carousel-indicators [data-bs-target]
+{
+    background-color: #869791 !important;
+    width: 7px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+}
+
+
+/* Blog */
+#blog .card-text{
+    font-size: 20px;
+}
+
+
+/* Contact */
+#contact .icon-box{
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-item:hover .icon-box{
+    background-color: #1c1c1c !important;
+    color: #fff;
+}
+
+
+
+
+/* ScrollSpy */
+
+.navbar-nav .nav-link.active{
+    border-bottom: 2px solid #fff !important;
+}
+
+
+
